@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Academia Michel Miyashita • Treino, Disciplina & Respeito</title>
+  <meta name="description" content="Academia de Jiu-Jitsu: turmas adulto e kids, iniciante ao avançado, preparação física e competições. A primeira aula é experimental."/>
+  <meta property="og:title" content="Academia Michel Miyashita"/>
+  <meta property="og:description" content="Treino, disciplina e respeito. Matrículas abertas."/>
+  <meta property="og:image" content="https://images.unsplash.com/photo-1571771685300-b7601744aaa0?q=80&w=1600&auto=format&fit=crop"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='84'>🥋</text></svg>">
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a href="#" class="brand" aria-label="Página inicial Academia Michel Miyashita">
+        <span class="mark">🥋</span>
+        <b>Michel Miyashita</b>
+      </a>
+
+      <!-- Desktop menu -->
+      <nav aria-label="principal">
+        <ul class="desktop">
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#horarios">Horários</a></li>
+          <li><a href="#treinadores">Treinadores</a></li>
+          <li><a href="#planos">Planos</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+
+        <!-- Mobile menu toggle -->
+        <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" onclick="toggleMenu()">
+          <span></span><span></span><span></span>
+        </button>
+
+        <!-- Mobile menu -->
+        <ul id="mobileMenu" class="mobile closed" role="menu">
+          <li><a href="#sobre" onclick="toggleMenu()">Sobre</a></li>
+          <li><a href="#horarios" onclick="toggleMenu()">Horários</a></li>
+          <li><a href="#treinadores" onclick="toggleMenu()">Treinadores</a></li>
+          <li><a href="#planos" onclick="toggleMenu()">Planos</a></li>
+          <li><a href="#contato" onclick="toggleMenu()">Contato</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-cta">
+        <a class="btn" href="#planos">Ver planos</a>
+        <a class="btn accent" href="https://wa.me/5511959638406?text=Ol%C3%A1!%20Quero%20agendar%20uma%20aula%20experimental." target="_blank" rel="noopener">Aula experimental</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="sobre">
+      <div class="container grid-hero">
+        <div>
+          <span class="chip">Disciplina • Respeito • Constância</span>
+          <h1>Jiu-Jitsu para todos os níveis, do <u>primeiro kimono</u> ao <u>faixa-preta</u>.</h1>
+          <p class="lead">Treinos técnicos e funcionais, turmas adulto e kids, preparo para competições e foco em evolução real. A primeira aula é <b>gratuita</b>.</p>
+          <div class="hero-ctas">
+            <a class="btn accent" href="https://wa.me/5511959638406?text=Quero%20aula%20experimental" target="_blank" rel="noopener">Agendar aula</a>
+            <a class="btn primary" href="#horarios">Ver horários</a>
+          </div>
+          <div class="badges">
+            <span class="chip">Turmas: manhã • tarde • noite</span>
+            <span class="chip">Kids a partir de 6 anos</span>
+            <span class="chip">Equipe com experiência em campeonatos</span>
+          </div>
+        </div>
+        <div class="hero-card" aria-hidden="true">
+          <img class="hero-img" src="./jiuJitsu.avif" alt="Luta de Jiu-Jitsu no tatame"/>
+        </div>
+      </div>
+    </section>
+
+    <!-- DIFERENCIAIS -->
+    <section class="container" aria-label="diferenciais">
+      <h2 class="section-title">Nossos diferenciais</h2>
+      <p class="section-sub">Treino sério, ambiente respeitoso e método comprovado.</p>
+      <div class="features">
+        <article class="feature"><h3>Turmas por nível</h3><p>Iniciante, intermediário e avançado, para evolução sem pressão.</p></article>
+        <article class="feature"><h3>Foco técnico</h3><p>Fundamentos, drill, sparring e análise de lutas.</p></article>
+        <article class="feature"><h3>Preparação física</h3><p>Condicionamento específico para o Jiu-Jitsu e prevenção de lesões.</p></article>
+      </div>
+    </section>
+
+    <!-- HORÁRIOS -->
+    <section id="horarios" class="container">
+      <h2 class="section-title">Horários das turmas</h2>
+      <p class="section-sub">Escolha seu período. Use os filtros para encontrar a turma ideal.</p>
+      <div class="schedule">
+        <div>
+          <div class="tags" role="group" aria-label="Filtros de horários">
+            <button class="btn" data-filter="todos">Todos</button>
+            <button class="btn" data-filter="manha">Manhã</button>
+            <button class="btn" data-filter="tarde">Tarde</button>
+            <button class="btn" data-filter="noite">Noite</button>
+            <button class="btn" data-filter="kids">Kids</button>
+            <button class="btn" data-filter="competicao">Competição</button>
+          </div>
+          <small class="obs">*Aula experimental disponível em qualquer turma.</small>
+        </div>
+        <div>
+          <table id="tb">
+            <thead><tr><th>Dia</th><th>Turma</th><th>Horário</th><th>Nível</th><th></th></tr></thead>
+            <tbody>
+              <tr data-tags="manha"><td>Seg</td><td>Fundamentos</td><td>07:00–08:00</td><td><span class="belt"><i></i> Iniciante</span></td><td><a class="btn" href="https://wa.me/5511959638406?text=Quero%20ir%20na%20turma%20de%20Fundamentos%2007h" target="_blank">Reservar</a></td></tr>
+              <tr data-tags="tarde"><td>Ter</td><td>Técnico</td><td>15:00–16:15</td><td><span class="belt"><i></i> Intermediário</span></td><td><a class="btn" href="https://wa.me/5511959638406?text=Reserva%20Ter%2015h%20T%C3%A9cnico" target="_blank">Reservar</a></td></tr>
+              <tr data-tags="noite competicao"><td>Qua</td><td>Competição</td><td>20:00–21:30</td><td><span class="belt"><i></i> Avançado</span></td><td><a class="btn" href="https://wa.me/5511959638406?text=Quero%20treino%20Competi%C3%A7%C3%A3o%20Qua%2020h" target="_blank">Reservar</a></td></tr>
+              <tr data-tags="kids tarde"><td>Qui</td><td>Kids (6–11)</td><td>16:30–17:20</td><td><span class="belt"><i></i> Iniciante</span></td><td><a class="btn" href="https://wa.me/5511959638406?text=Kids%20Qui%2016h30" target="_blank">Reservar</a></td></tr>
+              <tr data-tags="noite"><td>Sex</td><td>Fundamentos</td><td>19:00–20:00</td><td><span class="belt"><i></i> Iniciante</span></td><td><a class="btn" href="https://wa.me/5511959638406?text=Fundamentos%20Sex%2019h" target="_blank">Reservar</a></td></tr>
+              <tr data-tags="manha"><td>Sáb</td><td>Open Mat</td><td>10:00–11:30</td><td><span class="belt"><i></i> Todos</span></td><td><a class="btn" href="https://wa.me/5511959638406?text=Open%20Mat%20S%C3%A1bado%2010h" target="_blank">Reservar</a></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- TREINADORES -->
+    <section id="treinadores" class="container">
+      <h2 class="section-title">Treinadores</h2>
+      <p class="section-sub">Faixas-pretas e professores certificados, com anos de tatame.</p>
+      <div class="coaches">
+        <article class="coach"><img src="./Michel.png" alt="Mestre Michel"><div class="info"><strong>Mestre Michel</strong><br><small>Faixa-preta 3º grau • Fundamentos & Competição</small></div></article>
+        <article class="coach"><img src="./Gessica.png" alt="Mestre Gessica"><div class="info"><strong>Mestre Gessica</strong><br><small>Faixa-preta • Kids & Técnicas avançadas</small></div></article>
+        <article class="coach"><img src="./DanMiyashita.png" alt="Auxiliar Danilo"><div class="info"><strong>Auxiliar Danilo</strong><br><small>Faixa-verde • Competidor</small></div></article>
+        <article class="coach"><img src="./DavMiyashita.png" alt="Auxiliar Davi"><div class="info"><strong>Auxiliar Davi</strong><br><small>Faixa-verde • Competidor</small></div></article>
+      </div>
+    </section>
+
+    <!-- PLANOS -->
+    <section id="planos" class="container">
+      <h2 class="section-title">Planos</h2>
+      <p class="section-sub">Sem taxa surpresa. Descontos para semestral/anual.</p>
+      <div class="plans">
+        <article class="plan"><span class="chip">Mensal</span><div class="price">R$ 350</div><small>Treinos todos os dias</small><ul><li>Aula experimental inclusa</li><li>Acesso ao Open Mat</li><li>Plano kids com 10% OFF</li></ul><a class="btn" href="https://wa.me/5511959638406?text=Quero%20o%20Plano%20Mensal" target="_blank">Matricular</a></article>
+        <article class="plan"><span class="chip">Semestral</span><div class="price">R$ 310</div><small>6x no cartão ou à vista</small><ul><li>Treino técnico + físico</li><li>Sem taxa de matrícula</li><li>Desconto família</li></ul><a class="btn" href="https://wa.me/5511959638406?text=Plano%20Semestral" target="_blank">Matricular</a></article>
+        <article class="plan"><span class="chip">Anual</span><div class="price">R$ 279</div><small>12x no cartão ou à vista</small><ul><li>Suporte em campeonatos</li><li>Estratégia e análise de lutas</li><li>Camisa do time inclusa</li></ul><a class="btn" href="https://wa.me/5511959638406?text=Plano%20Anual" target="_blank">Matricular</a></article>
+      </div>
+    </section>
+
+    <!-- DEPOIMENTOS -->
+    <section class="container" aria-label="depoimentos">
+      <h2 class="section-title">Resultados reais</h2>
+      <div class="quotes">
+        <blockquote class="quote">“Comecei do zero e hoje já treino 3x por semana. Ambiente respeitoso e foco técnico.” — <b>Gabriel</b></blockquote>
+        <blockquote class="quote">“Minha filha ama as aulas kids! Professores pacientes e muita disciplina.” — <b>Fernanda</b></blockquote>
+        <blockquote class="quote">“Equipe ajudou muito na minha preparação para competir. Evoluí rápido.” — <b>Rafael</b></blockquote>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="container">
+      <h2 class="section-title">Perguntas frequentes</h2>
+      <div class="faq">
+        <details><summary>Preciso ter experiência?</summary><p>Não. Temos turmas específicas para iniciantes, com foco nos fundamentos.</p></details>
+        <details><summary>Qual roupa usar na aula experimental?</summary><p>Vá com roupa esportiva. Empréstimo de kimono pode estar disponível (consulte a unidade).</p></details>
+        <details><summary>Tem aulas para crianças?</summary><p>Sim, kids a partir de 6 anos, com foco em disciplina, coordenação e respeito.</p></details>
+        <details><summary>Posso treinar quantas vezes por semana?</summary><p>Temos planos 2x, 3x e equipe (competição). Também há Open Mat aos sábados.</p></details>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato" class="container">
+      <h2 class="section-title">Contato & Localização</h2>
+      <div class="contact">
+        <div>
+          <p><b>Endereço:</b> R. Domingos Fasolari, 180 - Casa Verde, São Paulo - SP</p>
+          <p><b>Telefone:</b> (11) 95963-8406</p>
+
+          <form id="trial" aria-label="Formulário aula experimental">
+            <input name="nome" placeholder="Seu nome" required>
+            <input name="telefone" placeholder="Telefone / WhatsApp" required>
+            <select name="periodo" required>
+              <option value="">Período</option>
+              <option>Manhã</option><option>Tarde</option><option>Noite</option>
+            </select>
+            <select name="nivel" required>
+              <option value="">Nível</option>
+              <option>Iniciante</option><option>Intermediário</option><option>Avançado</option>
+            </select>
+            <textarea name="mensagem" placeholder="Mensagem (opcional)"></textarea>
+            <button class="btn accent" type="submit">Agendar pelo WhatsApp</button>
+          </form>
+          <small id="trialMsg" role="status" aria-live="polite"></small>
+        </div>
+
+        <div>
+          <iframe title="Mapa da academia" class="map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.225858225128!2d-46.6553367!3d-23.5124081!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cef782613ae41d%3A0xce38003fd719ce66!2sStudio%20Miyashita%20Jiu%20Jitsu!5e0!3m2!1spt-BR!2sbr!4v1690000000000"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container foot">
+      <div class="brand"><span class="mark">🥋</span> <b>Michel Miyashita</b></div>
+      <small>© <span id="year"></span> Michel Miyashita. Todos os direitos reservados.</small>
+    </div>
+  </footer>
+
+  <div class="float-wa"><a href="https://wa.me/5511959638406?text=Ol%C3%A1!%20Quero%20treinar%20Jiu-Jitsu" target="_blank" rel="noopener" aria-label="Abrir WhatsApp">WA</a></div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
