@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Academia Michel Miyashita  • Treino, Disciplina & Respeito</title>
+  <meta name="description" content="Academia de Jiu‑Jitsu: turmas adulto e kids, iniciante ao avançado, preparação física e competições. A primeira aula é experimental."/>
+  <meta property="og:title" content="Academia Michel Miyashita "/>
+  <meta property="og:description" content="Treino, disciplina e respeito. Matrículas abertas."/>
+  <meta property="og:image" content="https://images.unsplash.com/photo-1571771685300-b7601744aaa0?q=80&w=1600&auto=format&fit=crop"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='84'>🥋</text></svg>">
+  <style>
+    /* Estética sóbria, forte e sem brilho excessivo */
+    :root{
+      --bg:#0e0f11; /* quase preto */
+      --paper:#14161a; /* cartão */
+      --ink:#e8e8ec; /* texto principal */
+      --muted:#9aa0a6; /* texto secundário */
+      --accent:#c2410c; /* marrom/laranja queimado */
+      --accent-2:#a3a3a3; /* detalhes discretos */
+      --line: rgba(255,255,255,.08);
+      --radius:14px;
+      --shadow: 0 10px 24px rgba(0,0,0,.35);
+      --grid-max: 1120px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial; background: var(--bg); color:var(--ink); line-height:1.6;}
+    a{color:inherit; text-decoration:none}
+    .container{width:min(var(--grid-max),92%); margin:0 auto}
+    .btn{display:inline-flex; align-items:center; gap:.6rem; padding:.85rem 1.1rem; border-radius:10px; font-weight:600; cursor:pointer; border:1px solid var(--line); background:#1a1d22; color:var(--ink); transition:.2s ease}
+    .btn:hover{transform:translateY(-1px);}
+    .btn.primary{background:#1f2329; border-color:#2a2f36}
+    .btn.accent{background:var(--accent); color:#140e0b; border-color:#6b2a08}
+    .chip{display:inline-flex; align-items:center; gap:.4rem; padding:.32rem .6rem; border-radius:999px; font-size:.78rem; border:1px solid var(--line); color:var(--muted); background:#121418}
+
+    header{position:sticky; top:0; z-index:50; background:rgba(10,11,12,.85); backdrop-filter: blur(6px); border-bottom:1px solid var(--line)}
+    .nav{display:flex; align-items:center; justify-content:space-between; padding:.8rem 0}
+    .brand{display:flex; align-items:center; gap:.7rem;}
+    .mark{width:38px; height:38px; border-radius:10px; display:grid; place-items:center; background:#1a1d22; border:1px solid var(--line)}
+    .brand b{font-family: Oswald, sans-serif; letter-spacing:.5px; font-size:1.05rem}
+    nav ul{list-style:none; display:flex; gap:1rem; margin:0; padding:0}
+    nav a{color:var(--muted); font-weight:500}
+    nav a:hover, nav a.active{color:var(--ink)}
+
+    /* HERO com foto de textura e grid simples */
+    .hero{position:relative; padding:86px 0 56px; overflow:hidden}
+    .hero::before{content:""; position:absolute; inset:0; background: linear-gradient(180deg, rgba(0,0,0,.5), transparent 40%), url('https://images.unsplash.com/photo-1571771685300-b7601744aaa0?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat; opacity:.35; filter:grayscale(40%);}
+    .hero > .container{position:relative}
+    .grid-hero{display:grid; grid-template-columns: 1.1fr .9fr; gap:1.6rem; align-items:center}
+    h1{font-family: Oswald, sans-serif; font-size: clamp(2rem,1.3rem + 2.8vw,3.4rem); line-height:1.05; margin:.2rem 0 .6rem}
+    .lead{color:var(--muted); max-width:58ch}
+    .hero-card{border:1px solid var(--line); background:#111317; border-radius:16px; padding:1rem; box-shadow:var(--shadow)}
+    .hero-img{width:100%; aspect-ratio:4/5; object-fit:cover; border-radius:12px; filter:grayscale(20%) contrast(1.05)}
+    .badges{display:flex; gap:.5rem; flex-wrap:wrap; margin-top:.8rem}
+
+    section{padding:56px 0; position:relative}
+    .section-title{font-family: Oswald, sans-serif; font-size: clamp(1.4rem,1rem + 1.4vw,2rem); margin:0 0 .4rem}
+    .section-sub{color:var(--muted); margin:0 0 1.4rem}
+
+    /* Blocos */
+    .features{display:grid; grid-template-columns: repeat(3,1fr); gap:1rem}
+    .feature{background:var(--paper); border:1px solid var(--line); border-radius:var(--radius); padding:1rem}
+    .feature h3{margin:.2rem 0 .2rem; font-size:1.05rem}
+    .feature p{color:var(--muted); margin:0}
+
+    /* Cronograma / horários */
+    .schedule{display:grid; grid-template-columns: .9fr 1.1fr; gap:1rem}
+    .tags{display:flex; gap:.5rem; flex-wrap:wrap}
+    table{width:100%; border-collapse:collapse; border:1px solid var(--line); border-radius:12px; overflow:hidden}
+    th, td{padding:.7rem .8rem; text-align:left; border-bottom:1px solid var(--line)}
+    th{font-family: Oswald, sans-serif; font-weight:500; color:#d7d7dd; background:#14161a}
+    tr:hover td{background:#121418}
+    .belt{display:inline-flex; align-items:center; gap:.4rem; font-size:.88rem;}
+    .belt i{display:inline-block; width:10px; height:10px; border-radius:2px; background:var(--accent)}
+
+    /* Treinadores */
+    .coaches{display:grid; grid-template-columns: repeat(4,1fr); gap:1rem}
+    .coach{background:var(--paper); border:1px solid var(--line); border-radius:var(--radius); overflow:hidden}
+    .coach img{width:100%; height:220px; object-fit:cover; filter:grayscale(25%)}
+    .coach .info{padding:.8rem 1rem 1rem}
+    .coach .info small{color:var(--muted)}
+
+    /* Planos */
+    .plans{display:grid; grid-template-columns: repeat(3,1fr); gap:1rem}
+    .plan{background:#111317; border:1px solid var(--line); border-radius:var(--radius); padding:1rem}
+    .price{font-family: Oswald, sans-serif; font-size:2rem}
+    .plan ul{margin:.6rem 0 1rem; padding-left:1rem; color:var(--muted)}
+
+    /* Depoimentos simples */
+    .quotes{display:grid; grid-template-columns: repeat(3,1fr); gap:1rem}
+    .quote{background:var(--paper); border:1px solid var(--line); border-radius:var(--radius); padding:1rem; font-style:italic}
+
+    /* FAQ */
+    .faq{display:grid; grid-template-columns: 1fr; gap:.6rem}
+    details{background:#111317; border:1px solid var(--line); border-radius:10px; padding:.7rem 1rem}
+    summary{cursor:pointer; font-weight:600}
+    details p{color:var(--muted)}
+
+    /* Contato */
+    .contact{display:grid; grid-template-columns: 1fr 1fr; gap:1rem}
+    form{display:grid; grid-template-columns: 1fr 1fr; gap:.8rem}
+    form input, form select, form textarea{width:100%; padding:.85rem 1rem; border-radius:10px; border:1px solid var(--line); background:#0f1115; color:var(--ink)}
+    form textarea{grid-column: span 2; min-height:110px}
+    .map{width:100%; height:320px; border:1px solid var(--line); border-radius:12px}
+
+    footer{border-top:1px solid var(--line); padding:26px 0 50px; color:var(--muted)}
+    .foot{display:flex; align-items:center; justify-content:space-between; gap:1rem; flex-wrap:wrap}
+
+    .float-wa{position:fixed; right:18px; bottom:18px; z-index:100}
+    .float-wa a{display:grid; place-items:center; width:56px; height:56px; border-radius:50%; background:#1f7a36; color:#07140b; font-weight:800; border:2px solid #0a0f0c}
+
+    /* Responsivo */
+    @media (max-width: 980px){
+      .grid-hero{grid-template-columns: 1fr}
+      .features{grid-template-columns: 1fr}
+      .schedule{grid-template-columns: 1fr}
+      .coaches{grid-template-columns: repeat(2,1fr)}
+      .plans{grid-template-columns: 1fr}
+      .quotes{grid-template-columns: 1fr}
+      .contact{grid-template-columns: 1fr}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a href="#" class="brand" aria-label="Página inicial Academia Michel Miyashita ">
+        <span class="mark">🥋</span>
+        <b>Michel Miyashita </b>
+      </a>
+      <nav aria-label="principal">
+        <ul>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#horarios">Horários</a></li>
+          <li><a href="#treinadores">Treinadores</a></li>
+          <li><a href="#planos">Planos</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+      <div class="nav-cta">
+        <a class="btn" href="#planos">Ver planos</a>
+        <a class="btn accent" href="https://wa.me/5511959638406?text=Olá! Quero agendar uma aula experimental." target="_blank" rel="noopener">Aula experimental</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="sobre">
+      <div class="container grid-hero">
+        <div>
+          <span class="chip">Disciplina • Respeito • Constância</span>
+          <h1>Jiu‑Jitsu para todos os níveis, do <u>primeiro kimono</u> ao <u>faixa‑preta</u>.</h1>
+          <p class="lead">Treinos técnicos e funcionais, turmas adulto e kids, preparo para competições e foco em evolução real. A primeira aula é <b>gratuita</b>.</p>
+          <div class="badges">
+            <span class="chip">Turmas: manhã • tarde • noite</span>
+            <span class="chip">Kids a partir de 6 anos</span>
+            <span class="chip">Equipe com experiência em campeonatos</span>
+          </div>
+          <div style="margin-top:1rem; display:flex; gap:.6rem; flex-wrap:wrap">
+            <a class="btn accent" href="https://wa.me/5511959638406?text=Quero%20aula%20experimental" target="_blank" rel="noopener">Agendar aula</a>
+            <a class="btn primary" href="#horarios">Ver horários</a>
+          </div>
+        </div>
+        <div class="hero-card" aria-hidden="true">
+          <img class="hero-img" src="./jiuJitsu.avif" alt="Luta de Jiu‑Jitsu no tatame"/>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="container" aria-label="diferenciais">
+      <h2 class="section-title">Nossos diferenciais</h2>
+      <p class="section-sub">Treino sério, ambiente respeitoso e método comprovado.</p>
+      <div class="features">
+        <article class="feature"><h3>Turmas por nível</h3><p>Iniciante, intermediário e avançado, para evolução sem pressão.</p></article>
+        <article class="feature"><h3>Foco técnico</h3><p>Fundamentos, drill, sparring e análise de lutas.</p></article>
+        <article class="feature"><h3>Preparação física</h3><p>Condicionamento específico para o Jiu‑Jitsu e prevenção de lesões.</p></article>
+      </div>
+    </section>
+
+    <!-- SCHEDULE -->
+    <section id="horarios" class="container">
+      <h2 class="section-title">Horários das turmas</h2>
+      <p class="section-sub">Escolha seu período. Use os filtros para encontrar a turma ideal.</p>
+      <div class="schedule">
+        <div>
+          <div class="tags" role="group" aria-label="Filtros de horários">
+            <button class="btn" data-filter="todos">Todos</button>
+            <button class="btn" data-filter="manha">Manhã</button>
+            <button class="btn" data-filter="tarde">Tarde</button>
+            <button class="btn" data-filter="noite">Noite</button>
+            <button class="btn" data-filter="kids">Kids</button>
+            <button class="btn" data-filter="competicao">Competição</button>
+          </div>
+          <small style="color:var(--muted); display:block; margin-top:.6rem">*Aula experimental disponível em qualquer turma.</small>
+        </div>
+        <div>
+          <table id="tb">
+            <thead><tr><th>Dia</th><th>Turma</th><th>Horário</th><th>Nível</th><th></th></tr></thead>
+            <tbody>
+              <tr data-tags="manha"><td>Seg</td><td>Fundamentos</td><td>07:00–08:00</td><td><span class="belt"><i></i> Iniciante</span></td><td><a class="btn" href="https://wa.me/5511959638406?text=Quero%20ir%20na%20turma%20de%20Fundamentos%2007h" target="_blank">Reservar</a></td></tr>
+              <tr data-tags="tarde"><td>Ter</td><td>Técnico</td><td>15:00–16:15</td><td><span class="belt"><i></i> Intermediário</span></td><td><a class="btn" href="https://wa.me/5511959638406?text=Reserva%20Ter%2015h%20Técnico" target="_blank">Reservar</a></td></tr>
+              <tr data-tags="noite competicao"><td>Qua</td><td>Competição</td><td>20:00–21:30</td><td><span class="belt"><i></i> Avançado</span></td><td><a class="btn" href="https://wa.me/5511959638406?text=Quero%20treino%20Competição%20Qua%2020h" target="_blank">Reservar</a></td></tr>
+              <tr data-tags="kids tarde"><td>Qui</td><td>Kids (6–11)</td><td>16:30–17:20</td><td><span class="belt"><i></i> Iniciante</span></td><td><a class="btn" href="https://wa.me/5511959638406?text=Kids%20Qui%2016h30" target="_blank">Reservar</a></td></tr>
+              <tr data-tags="noite"><td>Sex</td><td>Fundamentos</td><td>19:00–20:00</td><td><span class="belt"><i></i> Iniciante</span></td><td><a class="btn" href="https://wa.me/5511959638406?text=Fundamentos%20Sex%2019h" target="_blank">Reservar</a></td></tr>
+              <tr data-tags="manha"><td>Sáb</td><td>Open Mat</td><td>10:00–11:30</td><td><span class="belt"><i></i> Todos</span></td><td><a class="btn" href="https://wa.me/5511959638406?text=Open%20Mat%20Sábado%2010h" target="_blank">Reservar</a></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- COACHES -->
+    <section id="treinadores" class="container">
+      <h2 class="section-title">Treinadores</h2>
+      <p class="section-sub">Faixas‑pretas e professores certificados, com anos de tatame.</p>
+      <div class="coaches">
+        <article class="coach">
+          <img src="./Michel.png" alt="Professor faixa‑preta">
+          <div class="info"><strong>Mestre Michel</strong><br><small>Faixa‑preta 3º grau • Fundamentos & Competição</small></div>
+        </article>
+        <article class="coach">
+          <img src="./Gessica.png" alt="Professora Jiu‑Jitsu">
+          <div class="info"><strong>Mestre Gessica</strong><br><small>Faixa‑preta • Kids & Técnicas avançadas</small></div>
+        </article>
+        <article class="coach">
+          <img src="./DanMiyashita.png" alt="Instrutor no tatame">
+          <div class="info"><strong>Auxiliar Danilo</strong><br><small>Faixa‑verde • Competidor</small></div>
+        </article>
+        <article class="coach">
+          <img src="./DavMiyashita.png" alt="Instrutora no tatame">
+          <div class="info"><strong>Auxiliar Davi</strong><br><small>Faixa‑verde • Competidor</small></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- PLANS -->
+    <section id="planos" class="container">
+      <h2 class="section-title">Planos</h2>
+      <p class="section-sub">Sem taxa surpresa. Descontos para semestral/anual.</p>
+      <div class="plans">
+        <article class="plan">
+          <span class="chip">Mensal</span>
+          <div class="price">R$ 350</div>
+          <small>Treinos todos os dias</small>
+          <ul>
+            <li>Aula experimental inclusa</li>
+            <li>Acesso ao Open Mat</li>
+            <li>Plano kids com 10% OFF</li>
+          </ul>
+          <a class="btn" href="https://wa.me/5511959638406?text=Quero%20o%20Plano%20Mensal" target="_blank">Matricular</a>
+        </article>
+        <article class="plan">
+          <span class="chip">Semestral</span>
+          <div class="price">R$ 310</div>
+          <small>6x no cartão ou a vista</small>
+          <ul>
+            <li>Treino técnico + físico</li>
+            <li>Sem taxa de matrícula</li>
+            <li>Desconto família</li>
+          </ul>
+          <a class="btn" href="https://wa.me/5511959638406?text=Plano%20Semestral" target="_blank">Matricular</a>
+        </article>
+        <article class="plan">
+          <span class="chip">Anual</span>
+          <div class="price">R$ 279</div>
+          <small>12x no cartão ou a vista</small>
+          <ul>
+            <li>Suporte em campeonatos</li>
+            <li>Estratégia e análise de lutas</li>
+            <li>Camisa do time inclusa</li>
+          </ul>
+          <a class="btn" href="https://wa.me/5511959638406?text=Plano%20Anual" target="_blank">Matricular</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- QUOTES -->
+    <section class="container" aria-label="depoimentos">
+      <h2 class="section-title">Resultados reais</h2>
+      <div class="quotes">
+        <blockquote class="quote">“Comecei do zero e hoje já treino 3x por semana. Ambiente respeitoso e foco técnico.” — <b>Gabriel</b></blockquote>
+        <blockquote class="quote">“Minha filha ama as aulas kids! Professores pacientes e muita disciplina.” — <b>Fernanda</b></blockquote>
+        <blockquote class="quote">“Equipe ajudou muito na minha preparação para competir. Evoluí rápido.” — <b>Rafael</b></blockquote>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="container">
+      <h2 class="section-title">Perguntas frequentes</h2>
+      <div class="faq">
+        <details><summary>Preciso ter experiência?</summary><p>Não. Temos turmas específicas para iniciantes, com foco nos fundamentos.</p></details>
+        <details><summary>Qual roupa usar na aula experimental?</summary><p>Vá com roupa esportiva. Empréstimos de kimono podem estar disponíveis (consulte a unidade).</p></details>
+        <details><summary>Tem aulas para crianças?</summary><p>Sim, kids a partir de 6 anos, com foco em disciplina, coordenação e respeito.</p></details>
+        <details><summary>Posso treinar quantas vezes por semana?</summary><p>Temos planos 2x, 3x e equipe (competição). Também há Open Mat aos sábados.</p></details>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contato" class="container">
+      <h2 class="section-title">Contato & Localização</h2>
+      <div class="contact">
+        <div>
+          <p><b>Endereço:</b> R. Domingos Fasolari, 180 - Casa Verde, São Paulo - SP</p>
+          <p><b>Telefone:</b> (11) 95963-8406</p>
+          <form id="trial" aria-label="Formulário aula experimental">
+            <input name="nome" placeholder="Seu nome" required>
+            <input name="telefone" placeholder="Telefone / WhatsApp" required>
+            <select name="periodo" required>
+              <option value="">Período</option>
+              <option>Manhã</option>
+              <option>Tarde</option>
+              <option>Noite</option>
+            </select>
+            <select name="nivel" required>
+              <option value="">Nível</option>
+              <option>Iniciante</option>
+              <option>Intermediário</option>
+              <option>Avançado</option>
+            </select>
+            <textarea name="mensagem" placeholder="Mensagem (opcional)"></textarea>
+            <button class="btn accent" type="submit">Agendar pelo WhatsApp</button>
+          </form>
+          <small id="trialMsg" role="status" aria-live="polite"></small>
+        </div>
+        <div>
+<iframe title="Mapa da academia" class="map"
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.225858225128!2d-46.6553367!3d-23.5124081!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cef782613ae41d%3A0xce38003fd719ce66!2sStudio%20Miyashita%20Jiu%20Jitsu!5e0!3m2!1spt-BR!2sbr!4v1690000000000"
+  loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container foot">
+      <div class="brand"><span class="mark">🥋</span> <b>Michel Miyashita </b></div>
+      <small>© <span id="year"></span> Michel Miyashita . Todos os direitos reservados.</small>
+    </div>
+  </footer>
+
+  <div class="float-wa"><a href="https://wa.me/5511959638406?text=Olá!%20Quero%20treinar%20Jiu-Jitsu" target="_blank" rel="noopener" aria-label="Abrir WhatsApp">WA</a></div>
+
+  <script>
+    // Filtro de horários
+    const tb = document.getElementById('tb');
+    document.querySelectorAll('[data-filter]').forEach(btn=>{
+      btn.addEventListener('click',()=>{
+        const tag = btn.dataset.filter;
+        [...tb.tBodies[0].rows].forEach(r=>{
+          if(tag==='todos') r.style.display='';
+          else r.style.display = r.dataset.tags.includes(tag) ? '' : 'none';
+        });
+      });
+    });
+
+    // Form aula experimental → WhatsApp
+    const trial = document.getElementById('trial');
+    const trialMsg = document.getElementById('trialMsg');
+    trial?.addEventListener('submit', (e)=>{
+      e.preventDefault(); const fd = new FormData(trial);
+      const nome = fd.get('nome'); const tel = fd.get('telefone'); const periodo = fd.get('periodo'); const nivel = fd.get('nivel');
+      const msg = encodeURIComponent(`Olá! Sou ${nome}. Tel: ${tel}. Quero aula experimental (${nivel}) no período ${periodo}.`);
+      const wa = `https://wa.me/5511959638406?text=${msg}`; trialMsg.textContent='Abrindo WhatsApp…'; window.open(wa,'_blank');
+      setTimeout(()=> trialMsg.textContent='Se preferir, retornaremos por mensagem.', 1200);
+    });
+
+    // Ano no footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // JSON‑LD
+    const ld = {"@context":"https://schema.org","@type":"SportsActivityLocation","name":"Michel Miyashita ","sport":"Jiu-Jitsu","telephone":"+55 11 97777-7777","address":{"@type":"PostalAddress","streetAddress":"Rua do Tatame, 100","addressLocality":"São Paulo","addressRegion":"SP","addressCountry":"BR"},"openingHours":["Mo-Fr 07:00-21:30","Sa 10:00-11:30"],"url":window.location.href};
+    const s=document.createElement('script'); s.type='application/ld+json'; s.textContent=JSON.stringify(ld); document.head.appendChild(s);
+  </script>
+</body>
+</html>
