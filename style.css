@@ -55,7 +55,7 @@ section{padding:56px 0; position:relative}
 .feature h3{margin:.2rem 0 .2rem; font-size:1.05rem}
 .feature p{color:var(--muted); margin:0}
 
-/* Schedule */
+/* Schedule (tabela antiga segue disponível, mas agora usamos cards) */
 .schedule{display:grid; grid-template-columns: .9fr 1.1fr; gap:1rem}
 .tags{display:flex; gap:.5rem; flex-wrap:wrap}
 .obs{color:var(--muted); display:block; margin-top:.6rem}
@@ -102,6 +102,46 @@ footer{border-top:1px solid var(--line); padding:26px 0 50px; color:var(--muted)
 .float-wa{position:fixed; right:18px; bottom:18px; z-index:100}
 .float-wa a{display:grid; place-items:center; width:56px; height:56px; border-radius:50%; background:#1f7a36; color:#fff; font-weight:800; border:2px solid #0a0f0c}
 
+/* === NOVO: Cards de horários (alinhados como os Treinadores) === */
+.schedule-cards{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 cards lado a lado no desktop */
+  gap:1rem;
+  align-items: stretch;
+}
+
+.day-card{
+  background:var(--paper);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:1rem;
+  display:flex;
+  flex-direction:column;
+  gap:.8rem;
+  box-shadow: var(--shadow);
+}
+
+.day-card h3{
+  margin:0;
+  font-family: Oswald, sans-serif;
+  font-size:1.1rem;
+}
+
+.day-card ul{
+  list-style:none;
+  padding:0;
+  margin:0;
+  color:var(--muted);
+  line-height:1.7;
+}
+
+.day-card li b{ color: var(--ink); }
+
+.day-card .btn{
+  align-self:flex-start;
+  margin-top:.4rem;
+}
+
 /* Responsivo */
 @media (max-width: 980px){
   /* Desktop menu some */
@@ -111,27 +151,20 @@ footer{border-top:1px solid var(--line); padding:26px 0 50px; color:var(--muted)
   .grid-hero{grid-template-columns: 1fr}
   .hero-img{max-width:380px; margin:0 auto}
   .features{grid-template-columns: 1fr}
+
+  /* Cards de horários empilham no mobile */
+  .schedule-cards{grid-template-columns: 1fr}
+
   .schedule{grid-template-columns: 1fr}
   .coaches{grid-template-columns: repeat(2,1fr)}
   .plans{grid-template-columns: 1fr}
   .quotes{grid-template-columns: 1fr}
   .contact{grid-template-columns: 1fr}
 
-  .nav-cta {
-    display: none !important; /* remove CTA buttons from header */
-  }
-
-  header .nav {
-    padding: 0.6rem 0; /* slightly smaller header */
-  }
-
-  .brand b {
-    font-size: 1rem; /* reduces text size for better fit */
-  }
-
-  .menu-toggle {
-    margin-left: auto; /* pushes toggle to the right */
-  }
+  .nav-cta { display: none !important; }
+  header .nav { padding: 0.6rem 0; }
+  .brand b { font-size: 1rem; }
+  .menu-toggle { margin-left: auto; }
 }
 
 @media (min-width: 981px){
