@@ -668,3 +668,29 @@ footer {
 .my-float {
   margin-top: 16px;
 }
+
+.highlight {
+  background: linear-gradient(90deg, #ff7a00, #ffbd59);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+
+.spaced {
+  margin-top: 36px;
+}
+
+.titles {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.titles li {
+  padding: .4rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.titles li:last-child {
+  border-bottom: none;
+}
