@@ -759,10 +759,6 @@ footer {
   transition: filter .25s ease;
 }
 
-.famous-card:hover img {
-  filter: grayscale(0%);
-}
-
 .famous-card span {
   display: block;
   text-align: center;
