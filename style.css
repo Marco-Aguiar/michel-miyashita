@@ -800,3 +800,22 @@ footer {
     height: 220px;
   }
 }
+
+
+.famous-card span {
+  display: block;
+  text-align: center;
+  padding: .6rem .4rem 0;
+  font-weight: 600;
+  color: var(--ink);
+  font-family: Oswald, sans-serif;
+}
+
+.famous-card .famous-role {
+  display: block;
+  text-align: center;
+  padding-bottom: .8rem;
+  font-size: .85rem;
+  color: var(--muted);
+  font-weight: 400;
+}
