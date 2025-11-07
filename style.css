@@ -840,3 +840,115 @@ form select:focus {
     font-size: 16px;
   }
 }
+
+
+.plan .chip {
+  background: #1f2329;
+  border-color: #2a2f36;
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.plan.private .chip {
+  background: var(--accent);
+  color: #140e0b;
+  border-color: #8b3908;
+  font-weight: 700;
+  transform: scale(1.06);
+}
+.plan.private {
+  box-shadow: 0 0 12px rgba(194, 65, 12, .35);
+  border-color: var(--accent);
+}
+
+/* Destaque visual do plano privado */
+.plan.private {
+  border-color: var(--accent);
+  box-shadow: 0 0 14px rgba(194, 65, 12, 0.4);
+  transform: scale(1.02);
+}
+
+.plan.private .chip {
+  background: var(--accent);
+  color: #140e0b;
+  border-color: #8b3908;
+  font-weight: 700;
+}
+
+/* Estilização dos chips dos outros planos */
+.plan .chip {
+  background: #1f2329;
+  border-color: #2a2f36;
+  color: var(--ink);
+  font-weight: 600;
+}
+
+/* Descrição do plano */
+.plan-info {
+  color: var(--muted);
+  margin: .4rem 0 .8rem;
+}
+.plan.private .header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: .8rem;
+}
+
+.plan.private .badge {
+  margin-right: auto;
+}
+
+.plan.private .chip {
+  margin-left: 1rem;
+  transform: scale(1.05);
+}
+
+.plan-header {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  margin-bottom: 1rem;
+}
+
+.plan.private .badge {
+  background: var(--accent);
+  color: #140e0b;
+  border-radius: 8px;
+  padding: .2rem .6rem;
+  font-size: .75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .03rem;
+}
+
+.plan.private .chip {
+  background: #1f2329;
+  border: 1px solid #2a2f36;
+  padding: .25rem .65rem;
+  border-radius: 999px;
+  font-size: .78rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin-left: auto; /* <-- empurra o chip para a direita */
+}
+
+.plan {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* empurra o botão para o final */
+  height: 100%; /* garante altura igual entre os cards */
+}
+
+.plan a.btn {
+  margin-top: auto; /* força o botão a ir para a parte inferior */
+}
+.plan .chip,
+.plan .badge {
+  width: fit-content;
+  display: inline-flex; /* garante que fique só do tamanho do texto */
+}
+
+.plan > .plan-info {
+  margin-top: 1.2rem;
+}
