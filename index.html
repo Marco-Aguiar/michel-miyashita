@@ -1,401 +1,708 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Academia Michel Miyashita • Jiu-Jitsu de Elite</title>
-  <meta name="description"
-    content="Jiu-Jitsu técnico, inteligente e voltado à excelência. Treinos exclusivos com equipe federada pela CBJJ & IBJJF. Primeira aula gratuita." />
-  <meta property="og:title" content="Academia Michel Miyashita" />
-  <meta property="og:description"
-    content="Jiu-Jitsu inteligente, técnica refinada e ambiente familiar de alto padrão." />
-  <meta property="og:image"
-    content="https://images.unsplash.com/photo-1571771685300-b7601744aaa0?q=80&w=1600&auto=format&fit=crop" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <title>Miyashita BJJ | Jiu-Jitsu em São Paulo</title>
+
+  <meta
+    name="description"
+    content="Academia Miyashita BJJ em São Paulo. Aulas de Jiu-Jitsu para adultos, crianças, iniciantes e competidores. Aula experimental gratuita."
+  />
+
+  <meta property="og:title" content="Miyashita BJJ | Jiu-Jitsu em São Paulo" />
+  <meta
+    property="og:description"
+    content="Jiu-Jitsu técnico, ambiente familiar, metodologia inteligente e professores experientes. Agende sua aula experimental."
+  />
+  <meta property="og:image" content="./michel-fighting.jpeg" />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
   <link
-    href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet">
-  <link rel="icon" type="image/png" href="./logo-equipe.png">
+    href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="icon" type="image/png" href="./logo-equipe.png" />
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+  <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
+  />
+
   <script type="text/javascript">
     (function (c, l, a, r, i, t, y) {
-      c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
-      t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
-      y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+      c[a] =
+        c[a] ||
+        function () {
+          (c[a].q = c[a].q || []).push(arguments);
+        };
+      t = l.createElement(r);
+      t.async = 1;
+      t.src = "https://www.clarity.ms/tag/" + i;
+      y = l.getElementsByTagName(r)[0];
+      y.parentNode.insertBefore(t, y);
     })(window, document, "clarity", "script", "u35otmd6ol");
   </script>
 </head>
 
 <body>
-  <header>
+  <header class="site-header">
     <div class="container nav">
-      <a href="#" class="brand" aria-label="Página inicial">
+      <a href="#inicio" class="brand" aria-label="Ir para o início">
         <img src="./logo-equipe.jpeg" alt="Logo Miyashita BJJ" class="logo-header" />
-        <b>Miyashita BJJ</b>
+        <span>Miyashita BJJ</span>
       </a>
 
-      <nav aria-label="principal">
-        <ul class="desktop">
+      <nav class="main-nav" aria-label="Menu principal">
+        <ul class="desktop-menu">
           <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#diferenciais">Diferenciais</a></li>
           <li><a href="#horarios">Horários</a></li>
+          <li><a href="#kids">Kids</a></li>
           <li><a href="#treinadores">Treinadores</a></li>
           <li><a href="#planos">Planos</a></li>
-          <li><a href="#filiais">Filiais</a></li>
           <li><a href="#contato">Contato</a></li>
         </ul>
 
-        <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" onclick="toggleMenu()">
-          <span></span><span></span><span></span>
+        <a
+          class="btn nav-cta"
+          href="https://wa.me/5511959638406?text=Olá!%20Gostaria%20de%20agendar%20uma%20aula%20experimental."
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Aula experimental
+        </a>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+          aria-controls="mobileMenu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
         </button>
 
-        <ul id="mobileMenu" class="mobile closed" role="menu">
-          <li><a href="#sobre" onclick="toggleMenu()">Sobre</a></li>
-          <li><a href="#horarios" onclick="toggleMenu()">Horários</a></li>
-          <li><a href="#treinadores" onclick="toggleMenu()">Treinadores</a></li>
-          <li><a href="#famosos" onclick="toggleMenu()">Alunos de Destaque</a></li>
-          <li><a href="#planos" onclick="toggleMenu()">Planos</a></li>
-          <li><a href="#filiais" onclick="toggleMenu()">Filiais</a></li>
-          <li><a href="#contato" onclick="toggleMenu()">Contato</a></li>
+        <ul id="mobileMenu" class="mobile-menu closed">
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#diferenciais">Diferenciais</a></li>
+          <li><a href="#horarios">Horários</a></li>
+          <li><a href="#kids">Kids</a></li>
+          <li><a href="#treinadores">Treinadores</a></li>
+          <li><a href="#planos">Planos</a></li>
+          <li><a href="#contato">Contato</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <!-- HERO -->
-  <section class="hero" id="sobre">
-    <div class="container grid-hero">
-      <div>
-        <span class="chip">Excelência • Técnica • Consciência</span>
-        <h1><span class="highlight">Jiu-Jitsu inteligente</span> para quem busca evolução com propósito.</h1>
-        <p class="lead">Treinos de alto padrão com metodologia refinada, técnica moderna e ambiente familiar.
-          Aprenda com quem treina campeões — e personalidades reconhecidas. <br>Aulas em inglês, português e japonês.
-        </p>
-        <div class="hero-ctas">
-          <a class="btn accent"
-            href="https://wa.me/5511959638406?text=Gostaria%20de%20fazer%20uma%20aula%20experimental" target="_blank"
-            rel="noopener">Agendar aula</a>
-          <a class="btn primary" href="#horarios">Ver horários</a>
-        </div>
-        <p class="accreditation"><strong>Equipe federada pela CBJJ-IBJJF</strong></p>
-      </div>
+  <main id="inicio">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <span class="eyebrow">Jiu-Jitsu em São Paulo</span>
 
-      <div class="hero-card" aria-hidden="true" style="position: relative;">
-        <img class="hero-img" src="./michel-fighting.jpeg" alt="Luta de Jiu-Jitsu no tatame" />
-        <img src="./logo-equipe.jpeg" alt="Selo Miyashita BJJ" class="hero-logo" />
-      </div>
-    </div>
-  </section>
+          <h1>
+            Técnica, disciplina e evolução real no
+            <span>tatame.</span>
+          </h1>
 
-  <section class="container spaced" aria-label="sobre-o-mestre">
-    <h2 class="section-title">A Jornada do Mestre Michel</h2>
-    <p class="section-sub">Didática diferenciada para quem busca técnica, performance e mentalidade vencedora.</p>
-    <div class="features">
-      <article class="feature">
-        <h3>Faixa-preta 4º Dan • Certificado IBJJF</h3>
-        <p>Com mais de 30 anos de experiência, Michel treinou no Japão, Brasil e Estados Unidos. Ensinando alunos de
-          elite, atletas e
-          celebridades. Sua metodologia une técnica precisa, postura e estratégia.</p>
-      </article>
+          <p class="lead">
+            Aulas de Jiu-Jitsu para adultos, crianças, iniciantes e competidores,
+            com metodologia inteligente, ambiente familiar e professores experientes.
+          </p>
 
-      <article class="feature">
-        <h3>Treinamentos inteligentes e personalizados</h3>
-        <p>Didática voltada para quem busca treinar com consciência, segurança e resultados reais. Aulas adaptadas ao
-          perfil e objetivo de cada aluno, em um ambiente familiar e disciplinado.</p>
-      </article>
-    </div>
-  </section>
+          <div class="hero-actions">
+            <a
+              class="btn btn-accent"
+              href="https://wa.me/5511959638406?text=Olá!%20Gostaria%20de%20agendar%20uma%20aula%20experimental%20na%20Miyashita%20BJJ."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Agendar aula experimental
+            </a>
 
-  <section id="famosos" class="container">
-    <h2 class="section-title">Alunos de Destaque</h2>
-    <p class="section-sub">Artistas, empresários e profissionais de alto nível que escolheram treinar com Mestre Michel.
-    </p>
-    <div class="famous-grid">
+            <a class="btn btn-secondary" href="#horarios">
+              Ver horários
+            </a>
+          </div>
 
-      <div class="famous-card">
-        <img src="./famoso1.webp.jpeg" alt="Felipe Roque">
-        <span>Felipe Roque</span>
-        <small class="famous-role">Ator e apresentador</small>
-      </div>
-
-      <div class="famous-card">
-        <img src="./famoso2.webp.jpeg" alt="Rogério Padovan">
-        <span>Rogério Padovan</span>
-        <small class="famous-role">Médico</small>
-      </div>
-
-      <div class="famous-card">
-        <img src="./famoso3 copy.jpg" alt="Ana Paula Minerato">
-        <span>Ana Paula Minerato</span>
-        <small class="famous-role">Modelo e digital influencer</small>
-      </div>
-
-      <div class="famous-card">
-        <img src="./famoso4.png" alt="Fabrício Padovan">
-        <span>Fabrício Padovan</span>
-        <small class="famous-role">Cirurgião plástico</small>
-      </div>
-
-    </div>
-  </section>
-
-
-  <section id="horarios" class="container">
-    <h2 class="section-title">Horários das turmas</h2>
-    <p class="section-sub">Treinos orientados, metodologia moderna e turmas reduzidas para máximo aproveitamento.</p>
-
-    <div class="schedule-cards">
-      <div class="day-card">
-        <h3>Seg, Qua, Sex</h3>
-        <ul>
-          <li><b>07:00</b> – Fundamentos</li>
-          <li><b>12:00</b> – Intensivo / Competição</li>
-          <li><b>19:00</b> – Fundamentos</li>
-        </ul>
-        <a class="btn" href="https://wa.me/5511959638406?text=Quero%20hor%C3%A1rios%20SegQuaSex"
-          target="_blank">Reservar</a>
-      </div>
-
-      <div class="day-card">
-        <h3>Ter, Qui</h3>
-        <ul>
-          <li><b>08:00</b> – Fundamentos</li>
-          <li><b>12:00</b> – Intensivo / Competição</li>
-          <li><b>19:00</b> – Kids</li>
-          <li><b>20:00</b> – Fundamentos</li>
-        </ul>
-        <a class="btn" href="https://wa.me/5511959638406?text=Quero%20hor%C3%A1rios%20TerQui"
-          target="_blank">Reservar</a>
-      </div>
-
-      <div class="day-card">
-        <h3>Sábado</h3>
-        <ul>
-          <li><b>10:00</b> – Open Mat</li>
-        </ul>
-        <a class="btn" href="https://wa.me/5511959638406?text=Open%20Mat%2010h" target="_blank">Reservar</a>
-      </div>
-    </div>
-  </section>
-
-  <section id="treinadores" class="container">
-    <h2 class="section-title">Treinadores</h2>
-    <p class="section-sub">Excelência comprovada nos tatames nacionais e internacionais</p>
-
-    <div class="coaches">
-      <article class="coach">
-        <img src="./Michel.png" alt="Mestre Michel">
-        <div class="info">
-          <strong>Mestre Michel</strong><br>
-          <small>Faixa-preta 4º grau • IBJJF • Fundamentos & Competição</small>
-          <ul class="titles">
-            <li>🥇 ⁠Campeão COPA KANSAI BJJ</li>
-            <li>🥇 ⁠Campeão ASIATICO BJJ</li>
-            <li>🥇 ⁠Campeão OPEN JAPAN DE JIU JITSU</li>
-          </ul>
-        </div>
-      </article>
-
-      <article class="coach">
-        <img src="./Gessica.png" alt="Mestre Gessica">
-        <div class="info">
-          <strong>Mestre Gessica</strong><br>
-          <small>Faixa-preta 1 Dan • Kids & particulares para bebês</small>
-          <ul class="titles">
-            <li>🥇 Campeã Copa Open 2025</li>
-            <li>🥈 Campeã Mundial CBJEE</li>
-            <li>🥈 Spring International Open IBJJF 2023</li>
-          </ul>
-        </div>
-      </article>
-
-      <article class="coach">
-        <img src="./DanMiyashita.jpeg" alt="Auxiliar Danilo">
-        <div class="info">
-          <strong>Auxiliar Danilo</strong><br>
-          <small>Faixa-verde • Competidor</small>
-          <ul class="titles">
-            <li>🥇 Campeão Curitiba Summer Internacional da CBJJ</li>
-            <li>🥇 Bicampeão bjj Internacional da CBJJE</li>
-            <li>🥇 Campeão pan-americano da CBJJE</li>
-          </ul>
-        </div>
-      </article>
-
-      <article class="coach">
-        <img src="./DavMiyashita.png" alt="Auxiliar Davi">
-        <div class="info">
-          <strong>Auxiliar Davi</strong><br>
-          <small>Faixa-verde • Competidor</small>
-          <ul class="titles">
-            <li>🥇 Campeão Rio Summer Internacional da CBJJ</li>
-            <li>🥇 Bicampeão Sul-americano da CBJJE</li>
-            <li>🥇 Campeão Pan-americano da CBJJE</li>
-          </ul>
-        </div>
-      </article>
-
-      <article class="coach">
-        <img src="./HelderNew.jpeg" alt="Mestre Helder">
-        <div class="info">
-          <strong>Instrutor Helder</strong><br>
-          <small>Professor da unidade Ipiranga</small>
-        </div>
-      </article>
-    </div>
-  </section>
-
-
-  <section id="planos" class="container">
-    <h2 class="section-title">Planos</h2>
-    <div class="plans">
-      <article class="plan private">
-        <div class="plan-header">
-          <span class="badge">Exclusivo</span>
-          <span class="chip">Aulas Particulares</span>
+          <div class="hero-stats" aria-label="Destaques da academia">
+            <div>
+              <strong>+30</strong>
+              <span>anos de experiência</span>
+            </div>
+            <div>
+              <strong>CBJJ</strong>
+              <span>e IBJJF</span>
+            </div>
+            <div>
+              <strong>2</strong>
+              <span>unidades em SP</span>
+            </div>
+          </div>
         </div>
 
-        <p class="plan-info">
-          Treino exclusivo com atenção total do treinador.<br>
-          Horário flexível, metodologia individual e evolução acelerada.
-        </p>
-
-        <ul>
-          <li>Personalização total</li>
-          <li>Ideal para atletas, empresários e iniciantes absolutos</li>
-        </ul>
-
-        <a class="btn accent"
-          href="https://wa.me/5511959638406?text=Olá!%20Tenho%20interesse%20em%20Aulas%20Particulares.%20Poderia%20me%20informar%20opções,%20valores%20e%20disponibilidade?"
-          target="_blank">Consultar valores</a>
-      </article>
-
-
-
-      <!-- Plano Mensal -->
-      <article class="plan">
-        <span class="chip">Plano Mensal</span>
-        <p class="plan-info">Acesso a todas as turmas, de segunda a sexta.</p>
-        <ul>
-          <li>Aula experimental gratuita</li>
-          <li>Sem fidelidade.</li>
-        </ul>
-        <a class="btn accent"
-          href="https://wa.me/5511959638406?text=Olá!%20Tenho%20interesse%20no%20Plano%20Mensal.%20Poderia%20me%20informar%20os%20valores?"
-          target="_blank">Consultar valores</a>
-      </article>
-
-      <!-- Plano Semestral -->
-      <article class="plan">
-        <span class="chip">Plano Semestral</span>
-        <p class="plan-info">Compromisso de 6 meses com condições especiais.</p>
-        <ul>
-          <li>Treino técnico + físico</li>
-          <li>Desconto no plano Kids</li>
-        </ul>
-        <a class="btn accent"
-          href="https://wa.me/5511959638406?text=Olá!%20Tenho%20interesse%20no%20Plano%20Semestral.%20Pode%20me%20informar%20as%20condições?"
-          target="_blank">Consultar valores</a>
-      </article>
-
-      <!-- Plano Anual -->
-      <article class="plan">
-        <span class="chip">Plano Anual</span>
-        <p class="plan-info">Evolução contínua com suporte exclusivo para atletas.</p>
-        <ul>
-          <li>Análise técnica periódica</li>
-          <li>Suporte em campeonatos</li>
-        </ul>
-        <a class="btn accent"
-          href="https://wa.me/5511959638406?text=Olá!%20Tenho%20interesse%20no%20Plano%20Anual.%20Pode%20me%20informar%20os%20valores?"
-          target="_blank">Consultar valores</a>
-      </article>
-
-    </div>
-  </section>
-
-  <section id="contato" class="container">
-    <h2 class="section-title">Contato & Localização</h2>
-    <p class="section-sub">Escolha a unidade mais próxima e agende sua aula experimental.</p>
-
-    <div class="units">
-
-      <!-- Unidade Casa Verde -->
-      <div class="unit">
-        <div class="unit-info">
-          <h3>Unidade Casa Verde</h3>
-          <p><b>Endereço:</b> R. Domingos Fasolari, 180 - Casa Verde, São Paulo - SP</p>
-          <p><b>Telefone:</b> (11) 95963-8406</p>
-
-          <form id="trial" aria-label="Formulário aula experimental">
-            <input name="nome" placeholder="Seu nome" required>
-            <select name="periodo" required>
-              <option value="">Período</option>
-              <option>Manhã</option>
-              <option>Tarde</option>
-              <option>Noite</option>
-            </select>
-            <select name="nivel" required>
-              <option value="">Nível</option>
-              <option>Iniciante</option>
-              <option>Intermediário</option>
-              <option>Avançado</option>
-            </select>
-            <textarea name="mensagem" placeholder="Mensagem (opcional)"></textarea>
-            <button class="btn accent" style="margin-top: 10px; margin-bottom: 35px;" type="submit">
-              Agendar pelo WhatsApp
-            </button>
-          </form>
-
-          <small id="trialMsg" role="status" aria-live="polite"></small>
-        </div>
-
-        <div class="unit-info">
-          <h3>Unidade Casa Verde</h3>
-          <p><b>Endereço:</b> R. Domingos Fasolari, 178 - Casa Verde, São Paulo - SP,</p>
-        </div>
-
-        <div class="unit-map" id="filiais">
-          <iframe title="Mapa da academia - Unidade Casa Verde" class="map"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.225858225128!2d-46.6553367!3d-23.5124081!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cef782613ae41d%3A0xce38003fd719ce66!2sStudio%20Miyashita%20Jiu%20Jitsu!5e0!3m2!1spt-BR!2sbr!4v1690000000000"
-            loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
+        <div class="hero-media">
+          <img
+            class="hero-img"
+            src="./michel-fighting.jpeg"
+            alt="Professor Michel em luta de Jiu-Jitsu no tatame"
+          />
+          <img
+            class="hero-seal"
+            src="./logo-equipe.jpeg"
+            alt=""
+            aria-hidden="true"
+          />
         </div>
       </div>
+    </section>
 
-      <!-- Unidade Ipiranga -->
-      <div class="unit">
-        <div class="unit-info">
-          <h3>Unidade Ipiranga</h3>
-          <p><b>Endereço:</b> Av. Dom Pedro I, 1193 - Vila Monumento, São Paulo - SP</p>
+    <section id="sobre" class="section">
+      <div class="container two-columns">
+        <div>
+          <span class="eyebrow">Sobre a equipe</span>
+          <h2 class="section-title">Uma escola de Jiu-Jitsu com base técnica e mentalidade vencedora.</h2>
         </div>
 
-        <div class="unit-map">
-          <iframe title="Mapa da academia - Unidade Ipiranga" class="map"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.471679205728!2d-46.6177067!3d-23.5850647!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5b1d8b0c7c7b%3A0x9a1e9d0a3c3c1e7c!2sAv.%20Dom%20Pedro%20I%2C%201193%20-%20Vila%20Monumento%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1734020000000"
-            loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
+        <div>
+          <p class="section-text">
+            A Miyashita BJJ combina tradição, técnica refinada e didática moderna.
+            O objetivo é formar alunos mais confiantes, disciplinados e preparados,
+            seja para defesa pessoal, qualidade de vida ou competição.
+          </p>
+
+          <p class="section-text">
+            As aulas são conduzidas em um ambiente familiar, seguro e respeitoso,
+            com atenção à evolução individual de cada aluno.
+          </p>
         </div>
       </div>
+    </section>
 
-    </div>
-  </section>
+    <section id="diferenciais" class="section section-muted">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Por que treinar aqui</span>
+          <h2 class="section-title">Jiu-Jitsu para diferentes objetivos.</h2>
+          <p class="section-subtitle">
+            Treine com propósito, constância e acompanhamento técnico.
+          </p>
+        </div>
 
-  <footer>
-    <div class="container foot">
-      <img src="./logo-equipe.jpeg" alt="Logo Miyashita BJJ" class="logo-footer" />
-      <small>© <span id="year"></span> Miyashita. Todos os direitos reservados. • <strong>Afiliado oficial CBJJ &
-          IBJJF</strong></small>
+        <div class="features-grid">
+          <article class="feature-card">
+            <span>01</span>
+            <h3>Iniciantes bem orientados</h3>
+            <p>
+              Aprenda os fundamentos com segurança, sem precisar chegar sabendo lutar.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <span>02</span>
+            <h3>Defesa pessoal</h3>
+            <p>
+              Desenvolva controle, confiança, noção corporal e tomada de decisão sob pressão.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <span>03</span>
+            <h3>Performance e competição</h3>
+            <p>
+              Treinos técnicos para alunos que buscam evolução esportiva e campeonatos.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <span>04</span>
+            <h3>Ambiente familiar</h3>
+            <p>
+              Espaço disciplinado, acolhedor e adequado para adultos, jovens e crianças.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container two-columns">
+        <div>
+          <span class="eyebrow">Mestre Michel</span>
+          <h2 class="section-title">Experiência internacional e didática refinada.</h2>
+        </div>
+
+        <div class="master-card">
+          <h3>Faixa-preta 4º Dan • Certificado IBJJF</h3>
+          <p>
+            Com mais de 30 anos de experiência, Michel treinou no Japão, Brasil e Estados Unidos,
+            ensinando alunos de diferentes níveis, atletas e personalidades.
+          </p>
+          <p>
+            Sua metodologia une técnica precisa, estratégia, disciplina e adaptação ao objetivo
+            de cada aluno.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="famosos" class="section section-muted">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Alunos de destaque</span>
+          <h2 class="section-title">Personalidades que treinaram com a equipe.</h2>
+          <p class="section-subtitle">
+            Artistas, profissionais e empresários que escolheram a metodologia Miyashita.
+          </p>
+        </div>
+
+        <div class="famous-grid">
+          <article class="famous-card">
+            <img src="./famoso1.webp.jpeg" alt="Felipe Roque" />
+            <div>
+              <strong>Felipe Roque</strong>
+              <span>Ator e apresentador</span>
+            </div>
+          </article>
+
+          <article class="famous-card">
+            <img src="./famoso2.webp.jpeg" alt="Rogério Padovan" />
+            <div>
+              <strong>Rogério Padovan</strong>
+              <span>Médico</span>
+            </div>
+          </article>
+
+          <article class="famous-card">
+            <img src="./famoso3 copy.jpg" alt="Ana Paula Minerato" />
+            <div>
+              <strong>Ana Paula Minerato</strong>
+              <span>Modelo e digital influencer</span>
+            </div>
+          </article>
+
+          <article class="famous-card">
+            <img src="./famoso4.png" alt="Fabrício Padovan" />
+            <div>
+              <strong>Fabrício Padovan</strong>
+              <span>Cirurgião plástico</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="horarios" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Grade de aulas</span>
+          <h2 class="section-title">Horários das turmas.</h2>
+          <p class="section-subtitle">
+            Escolha o melhor período e fale com a equipe para confirmar disponibilidade.
+          </p>
+        </div>
+
+        <div class="schedule-grid">
+          <article class="schedule-card">
+            <h3>Segunda e Quarta</h3>
+            <ul>
+              <li><strong>07:00</strong> Fundamentos</li>
+              <li><strong>12:00</strong> Intensivo / Competição</li>
+              <li><strong>19:00</strong> Kids 1</li>
+              <li><strong>20:00</strong> Adultos</li>
+            </ul>
+            <a
+              class="btn btn-small"
+              href="https://wa.me/5511959638406?text=Olá!%20Quero%20saber%20sobre%20os%20horários%20de%20segunda%20e%20quarta."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Reservar horário
+            </a>
+          </article>
+
+          <article class="schedule-card">
+            <h3>Terça e Quinta</h3>
+            <ul>
+              <li><strong>12:00</strong> Intensivo / Competição</li>
+              <li><strong>19:00</strong> Kids 2</li>
+              <li><strong>20:00</strong> Adultos</li>
+            </ul>
+            <a
+              class="btn btn-small"
+              href="https://wa.me/5511959638406?text=Olá!%20Quero%20saber%20sobre%20os%20horários%20de%20terça%20e%20quinta."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Reservar horário
+            </a>
+          </article>
+
+          <article class="schedule-card">
+            <h3>Sexta-feira</h3>
+            <ul>
+              <li><strong>12:00</strong> Intensivo / Competição</li>
+              <li><strong>19:00</strong> Adultos + Open Mat</li>
+            </ul>
+            <a
+              class="btn btn-small"
+              href="https://wa.me/5511959638406?text=Olá!%20Quero%20saber%20sobre%20os%20horários%20de%20sexta-feira."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Reservar horário
+            </a>
+          </article>
+
+          <article class="schedule-card">
+            <h3>Sábado</h3>
+            <ul>
+              <li><strong>10:00</strong> Open Mat</li>
+            </ul>
+            <a
+              class="btn btn-small"
+              href="https://wa.me/5511959638406?text=Olá!%20Quero%20saber%20sobre%20o%20Open%20Mat%20de%20sábado."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Reservar horário
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="kids" class="section section-kids">
+      <div class="container kids-grid">
+        <div>
+          <span class="eyebrow">Jiu-Jitsu infantil</span>
+          <h2 class="section-title">Mais disciplina, confiança e coordenação para crianças.</h2>
+          <p class="section-text">
+            O Jiu-Jitsu infantil ajuda no desenvolvimento físico, emocional e social.
+            As aulas trabalham disciplina, respeito, foco, autoconfiança e espírito de equipe.
+          </p>
+
+          <a
+            class="btn btn-accent"
+            href="https://wa.me/5511959638406?text=Olá!%20Gostaria%20de%20saber%20sobre%20as%20aulas%20de%20Jiu-Jitsu%20infantil."
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Saber sobre turma Kids
+          </a>
+        </div>
+
+        <img
+          src="./jiu-jitsu-infantil.png"
+          alt="Jiu-Jitsu infantil Miyashita"
+          class="kids-image"
+        />
+      </div>
+    </section>
+
+    <section id="treinadores" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Equipe técnica</span>
+          <h2 class="section-title">Treinadores.</h2>
+          <p class="section-subtitle">
+            Professores e auxiliares com experiência prática no tatame.
+          </p>
+        </div>
+
+        <div class="coaches-grid">
+          <article class="coach-card">
+            <img src="./Michel.png" alt="Mestre Michel" />
+            <div>
+              <h3>Mestre Michel</h3>
+              <p>Faixa-preta 4º grau • IBJJF • Fundamentos & Competição</p>
+              <ul>
+                <li>Campeão Copa Kansai BJJ</li>
+                <li>Campeão Asiático BJJ</li>
+                <li>Campeão Open Japan de Jiu-Jitsu</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="coach-card">
+            <img src="./Gessica.png" alt="Mestre Gessica" />
+            <div>
+              <h3>Mestre Gessica</h3>
+              <p>Faixa-preta 1º Dan • Kids & particulares para bebês</p>
+              <ul>
+                <li>Campeã Copa Open 2025</li>
+                <li>Campeã Mundial CBJEE</li>
+                <li>Spring International Open IBJJF 2023</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="coach-card">
+            <img src="./DanMiyashita.jpeg" alt="Auxiliar Danilo" />
+            <div>
+              <h3>Auxiliar Danilo</h3>
+              <p>Faixa-verde • Competidor</p>
+              <ul>
+                <li>Campeão Curitiba Summer Internacional da CBJJ</li>
+                <li>Bicampeão BJJ Internacional da CBJJE</li>
+                <li>Campeão Pan-americano da CBJJE</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="coach-card">
+            <img src="./DavMiyashita.png" alt="Auxiliar Davi" />
+            <div>
+              <h3>Auxiliar Davi</h3>
+              <p>Faixa-verde • Competidor</p>
+              <ul>
+                <li>Campeão Rio Summer Internacional da CBJJ</li>
+                <li>Bicampeão Sul-americano da CBJJE</li>
+                <li>Campeão Pan-americano da CBJJE</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="coach-card">
+            <img src="./HelderNew.jpeg" alt="Instrutor Helder" />
+            <div>
+              <h3>Instrutor Helder</h3>
+              <p>Professor da unidade Ipiranga</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="planos" class="section section-muted">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Planos</span>
+          <h2 class="section-title">Escolha seu formato de treino.</h2>
+          <p class="section-subtitle">
+            Consulte valores, disponibilidade e condições diretamente pelo WhatsApp.
+          </p>
+        </div>
+
+        <div class="plans-grid">
+          <article class="plan-card plan-highlight">
+            <span class="badge">Exclusivo</span>
+            <h3>Aulas Particulares</h3>
+            <p>
+              Treino individual com atenção total do professor, horário flexível
+              e evolução acelerada.
+            </p>
+            <ul>
+              <li>Personalização total</li>
+              <li>Ideal para iniciantes, atletas e empresários</li>
+              <li>Correção técnica individual</li>
+            </ul>
+            <a
+              class="btn btn-accent"
+              href="https://wa.me/5511959638406?text=Olá!%20Tenho%20interesse%20em%20aulas%20particulares.%20Pode%20me%20informar%20valores%20e%20disponibilidade?"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Consultar valores
+            </a>
+          </article>
+
+          <article class="plan-card">
+            <h3>Plano Mensal</h3>
+            <p>Acesso às turmas regulares com flexibilidade para começar.</p>
+            <ul>
+              <li>Aula experimental gratuita</li>
+              <li>Sem fidelidade</li>
+              <li>Ideal para iniciar</li>
+            </ul>
+            <a
+              class="btn btn-secondary"
+              href="https://wa.me/5511959638406?text=Olá!%20Tenho%20interesse%20no%20plano%20mensal.%20Pode%20me%20informar%20os%20valores?"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Consultar valores
+            </a>
+          </article>
+
+          <article class="plan-card">
+            <h3>Plano Semestral</h3>
+            <p>Compromisso de 6 meses com melhores condições para evolução contínua.</p>
+            <ul>
+              <li>Condições especiais</li>
+              <li>Treino técnico e físico</li>
+              <li>Desconto no plano Kids</li>
+            </ul>
+            <a
+              class="btn btn-secondary"
+              href="https://wa.me/5511959638406?text=Olá!%20Tenho%20interesse%20no%20plano%20semestral.%20Pode%20me%20informar%20as%20condições?"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Consultar valores
+            </a>
+          </article>
+
+          <article class="plan-card">
+            <h3>Plano Anual</h3>
+            <p>Formato para quem busca constância, suporte e evolução de longo prazo.</p>
+            <ul>
+              <li>Análise técnica periódica</li>
+              <li>Suporte em campeonatos</li>
+              <li>Melhor custo-benefício</li>
+            </ul>
+            <a
+              class="btn btn-secondary"
+              href="https://wa.me/5511959638406?text=Olá!%20Tenho%20interesse%20no%20plano%20anual.%20Pode%20me%20informar%20os%20valores?"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Consultar valores
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Contato e localização</span>
+          <h2 class="section-title">Agende sua aula experimental.</h2>
+          <p class="section-subtitle">
+            Preencha o formulário ou fale diretamente pelo WhatsApp.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-card">
+            <h3>Unidade Casa Verde</h3>
+            <p>
+              <strong>Endereço:</strong>
+              R. Domingos Fasolari, 180 - Casa Verde, São Paulo - SP
+            </p>
+            <p>
+              <strong>Telefone:</strong>
+              (11) 95963-8406
+            </p>
+
+            <form id="trial" aria-label="Formulário para aula experimental">
+              <div class="form-field">
+                <label for="nome">Nome</label>
+                <input id="nome" name="nome" type="text" placeholder="Seu nome" required />
+              </div>
+
+              <div class="form-field">
+                <label for="periodo">Período</label>
+                <select id="periodo" name="periodo" required>
+                  <option value="">Selecione</option>
+                  <option value="Manhã">Manhã</option>
+                  <option value="Tarde">Tarde</option>
+                  <option value="Noite">Noite</option>
+                </select>
+              </div>
+
+              <div class="form-field">
+                <label for="nivel">Nível</label>
+                <select id="nivel" name="nivel" required>
+                  <option value="">Selecione</option>
+                  <option value="Iniciante">Iniciante</option>
+                  <option value="Intermediário">Intermediário</option>
+                  <option value="Avançado">Avançado</option>
+                </select>
+              </div>
+
+              <div class="form-field form-field-full">
+                <label for="mensagem">Mensagem</label>
+                <textarea
+                  id="mensagem"
+                  name="mensagem"
+                  placeholder="Mensagem opcional"
+                ></textarea>
+              </div>
+
+              <button class="btn btn-accent" type="submit">
+                Agendar pelo WhatsApp
+              </button>
+
+              <small id="trialMsg" role="status" aria-live="polite"></small>
+            </form>
+          </div>
+
+          <div class="map-card">
+            <iframe
+              title="Mapa da academia - Unidade Casa Verde"
+              class="map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.225858225128!2d-46.6553367!3d-23.5124081!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cef782613ae41d%3A0xce38003fd719ce66!2sStudio%20Miyashita%20Jiu%20Jitsu!5e0!3m2!1spt-BR!2sbr!4v1690000000000"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+
+          <div class="contact-card">
+            <h3>Unidade Ipiranga</h3>
+            <p>
+              <strong>Endereço:</strong>
+              Av. Dom Pedro I, 1193 - Vila Monumento, São Paulo - SP
+            </p>
+
+            <a
+              class="btn btn-secondary"
+              href="https://wa.me/5511959638406?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20a%20unidade%20Ipiranga."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Falar sobre Ipiranga
+            </a>
+          </div>
+
+          <div class="map-card">
+            <iframe
+              title="Mapa da academia - Unidade Ipiranga"
+              class="map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.471679205728!2d-46.6177067!3d-23.5850647!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5b1d8b0c7c7b%3A0x9a1e9d0a3c3c1e7c!2sAv.%20Dom%20Pedro%20I%2C%201193%20-%20Vila%20Monumento%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1734020000000"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <a href="#inicio" class="footer-brand" aria-label="Voltar ao início">
+        <img src="./logo-equipe.jpeg" alt="Logo Miyashita BJJ" class="logo-footer" />
+      </a>
+
+      <p>
+        © <span id="year"></span> Miyashita BJJ. Todos os direitos reservados.
+        <strong>Equipe federada CBJJ & IBJJF.</strong>
+      </p>
     </div>
   </footer>
 
-  <a href="https://api.whatsapp.com/send?phone=5511959638406" class="float" target="_blank">
-    <i class="fa fa-whatsapp my-float"></i>
+  <a
+    href="https://wa.me/5511959638406?text=Olá!%20Gostaria%20de%20agendar%20uma%20aula%20experimental."
+    class="whatsapp-float"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Falar com a Miyashita BJJ pelo WhatsApp"
+  >
+    <i class="fa fa-whatsapp" aria-hidden="true"></i>
   </a>
 
   <script src="script.js" defer></script>
 </body>
-
 </html>
