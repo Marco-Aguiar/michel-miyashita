@@ -4,6 +4,8 @@ const mobileMenu = document.getElementById('mobileMenu');
 const menuButton = document.querySelector('.menu-toggle');
 const trialForm = document.getElementById('trial');
 const trialMsg = document.getElementById('trialMsg');
+const trialFormIpiranga = document.getElementById('trial-ipiranga');
+const trialMsgIpiranga = document.getElementById('trialMsgIpiranga');
 const yearElement = document.getElementById('year');
 
 function openWhatsApp(message) {
@@ -64,83 +66,58 @@ document.addEventListener('keydown', (event) => {
   }
 });
 
-trialForm?.addEventListener('submit', (event) => {
-  event.preventDefault();
-
-  const formData = new FormData(trialForm);
-
-  const nome = String(formData.get('nome') || '').trim();
-  const periodo = String(formData.get('periodo') || '').trim();
-  const nivel = String(formData.get('nivel') || '').trim();
-  const mensagem = String(formData.get('mensagem') || '').trim();
-
-  if (!nome || !periodo || !nivel) {
-    if (trialMsg) {
-      trialMsg.textContent = 'Preencha nome, período e nível para continuar.';
-    }
-
-    return;
-  }
-
-  const whatsappMessage = [
+function buildTrialMessage(nome, telefone, nivel, periodo, mensagem, unidade) {
+  return [
     `Olá! Meu nome é ${nome}.`,
-    `Gostaria de agendar uma aula experimental na Miyashita BJJ.`,
+    `Gostaria de agendar uma aula experimental na Miyashita BJJ${unidade ? ` - Unidade ${unidade}` : ''}.`,
+    telefone ? `Telefone: ${telefone}.` : '',
     `Nível: ${nivel}.`,
     `Período de preferência: ${periodo}.`,
     mensagem ? `Observação: ${mensagem}` : ''
   ]
     .filter(Boolean)
     .join('\n');
+}
 
-  if (trialMsg) {
-    trialMsg.textContent = 'Abrindo WhatsApp...';
-  }
+function handleTrialSubmit(form, msgEl, unidade) {
+  form?.addEventListener('submit', (event) => {
+    event.preventDefault();
 
-  openWhatsApp(whatsappMessage);
+    const formData = new FormData(form);
 
-  setTimeout(() => {
-    if (trialMsg) {
-      trialMsg.textContent =
-        'Caso o WhatsApp não abra automaticamente, clique no botão flutuante da página.';
+    const nome = String(formData.get('nome') || '').trim();
+    const telefone = String(formData.get('telefone') || '').trim();
+    const periodo = String(formData.get('periodo') || '').trim();
+    const nivel = String(formData.get('nivel') || '').trim();
+    const mensagem = String(formData.get('mensagem') || '').trim();
+
+    if (!nome || !periodo || !nivel) {
+      if (msgEl) {
+        msgEl.textContent = 'Preencha nome, período e nível para continuar.';
+      }
+      return;
     }
-  }, 1200);
-});
+
+    const whatsappMessage = buildTrialMessage(nome, telefone, nivel, periodo, mensagem, unidade);
+
+    if (msgEl) {
+      msgEl.textContent = 'Abrindo WhatsApp...';
+    }
+
+    openWhatsApp(whatsappMessage);
+
+    setTimeout(() => {
+      if (msgEl) {
+        msgEl.textContent =
+          'Caso o WhatsApp não abra automaticamente, clique no botão flutuante da página.';
+      }
+    }, 1200);
+  });
+}
+
+handleTrialSubmit(trialForm, trialMsg, 'Casa Verde');
+handleTrialSubmit(trialFormIpiranga, trialMsgIpiranga, 'Ipiranga');
 
 if (yearElement) {
   yearElement.textContent = new Date().getFullYear();
 }
-
-(function addStructuredData() {
-  const structuredData = {
-    '@context': 'https://schema.org',
-    '@type': 'SportsActivityLocation',
-    name: 'Miyashita BJJ',
-    description:
-      'Academia de Jiu-Jitsu em São Paulo com aulas para adultos, crianças, iniciantes e competidores.',
-    sport: 'Jiu-Jitsu',
-    telephone: '+55 11 95963-8406',
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: 'R. Domingos Fasolari, 180',
-      addressLocality: 'São Paulo',
-      addressRegion: 'SP',
-      addressCountry: 'BR'
-    },
-    openingHours: [
-      'Mo 07:00-21:00',
-      'Tu 12:00-21:00',
-      'We 07:00-21:00',
-      'Th 12:00-21:00',
-      'Fr 12:00-20:30',
-      'Sa 10:00-11:30'
-    ],
-    url: window.location.href,
-    sameAs: []
-  };
-
-  const script = document.createElement('script');
-  script.type = 'application/ld+json';
-  script.textContent = JSON.stringify(structuredData);
-
-  document.head.appendChild(script);
-})();

@@ -16,7 +16,10 @@
     property="og:description"
     content="Jiu-Jitsu técnico, ambiente familiar, metodologia inteligente e professores experientes. Agende sua aula experimental."
   />
-  <meta property="og:image" content="./michel-fighting.jpeg" />
+  <meta property="og:image" content="https://miyashita-bjj.com.br/michel-fighting.jpeg" />
+  <meta property="og:image:width" content="1080" />
+  <meta property="og:image:height" content="720" />
+  <meta property="og:url" content="https://miyashita-bjj.com.br/" />
   <meta property="og:type" content="website" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -27,13 +30,39 @@
     rel="stylesheet"
   />
 
+  <link rel="preload" as="image" href="./michel-fighting.jpeg" />
+
   <link rel="icon" type="image/png" href="./logo-equipe.png" />
+  <link rel="apple-touch-icon" href="./logo-equipe.png" />
+  <link rel="canonical" href="https://miyashita-bjj.com.br/" />
   <link rel="stylesheet" href="style.css" />
 
-  <link
-    rel="stylesheet"
-    href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
-  />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SportsActivityLocation",
+    "name": "Miyashita BJJ",
+    "description": "Academia de Jiu-Jitsu em São Paulo com aulas para adultos, crianças, iniciantes e competidores.",
+    "sport": "Jiu-Jitsu",
+    "telephone": "+55 11 95963-8406",
+    "url": "https://miyashita-bjj.com.br/",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "R. Domingos Fasolari, 180",
+      "addressLocality": "São Paulo",
+      "addressRegion": "SP",
+      "addressCountry": "BR"
+    },
+    "openingHours": [
+      "Mo 07:00-21:00",
+      "Tu 12:00-21:00",
+      "We 07:00-21:00",
+      "Th 12:00-21:00",
+      "Fr 12:00-20:30",
+      "Sa 10:00-11:30"
+    ]
+  }
+  </script>
 
   <script type="text/javascript">
     (function (c, l, a, r, i, t, y) {
@@ -156,12 +185,16 @@
             class="hero-img"
             src="./michel-fighting.jpeg"
             alt="Professor Michel em luta de Jiu-Jitsu no tatame"
+            width="1080"
+            height="720"
           />
           <img
             class="hero-seal"
             src="./logo-equipe.jpeg"
             alt=""
             aria-hidden="true"
+            width="1600"
+            height="1600"
           />
         </div>
       </div>
@@ -268,7 +301,7 @@
 
         <div class="famous-grid">
           <article class="famous-card">
-            <img src="./famoso1.webp.jpeg" alt="Felipe Roque" />
+            <img src="./famoso1.webp.jpeg" alt="Felipe Roque" width="955" height="744" loading="lazy" />
             <div>
               <strong>Felipe Roque</strong>
               <span>Ator e apresentador</span>
@@ -276,7 +309,7 @@
           </article>
 
           <article class="famous-card">
-            <img src="./famoso2.webp.jpeg" alt="Rogério Padovan" />
+            <img src="./famoso2.webp.jpeg" alt="Rogério Padovan" width="651" height="495" loading="lazy" />
             <div>
               <strong>Rogério Padovan</strong>
               <span>Médico</span>
@@ -284,7 +317,7 @@
           </article>
 
           <article class="famous-card">
-            <img src="./famoso3 copy.jpg" alt="Ana Paula Minerato" />
+            <img src="./famoso3 copy.jpg" alt="Ana Paula Minerato" width="1051" height="894" loading="lazy" />
             <div>
               <strong>Ana Paula Minerato</strong>
               <span>Modelo e digital influencer</span>
@@ -292,7 +325,7 @@
           </article>
 
           <article class="famous-card">
-            <img src="./famoso4.png" alt="Fabrício Padovan" />
+            <img src="./famoso4.png" alt="Fabrício Padovan" width="993" height="727" loading="lazy" />
             <div>
               <strong>Fabrício Padovan</strong>
               <span>Cirurgião plástico</span>
@@ -406,6 +439,9 @@
           src="./jiu-jitsu-infantil.png"
           alt="Jiu-Jitsu infantil Miyashita"
           class="kids-image"
+          width="2528"
+          height="1684"
+          loading="lazy"
         />
       </div>
     </section>
@@ -422,7 +458,7 @@
 
         <div class="coaches-grid">
           <article class="coach-card">
-            <img src="./Michel.png" alt="Mestre Michel" />
+            <img src="./Michel.png" alt="Mestre Michel" width="670" height="674" loading="lazy" />
             <div>
               <h3>Mestre Michel</h3>
               <p>Faixa-preta 4º grau • IBJJF • Fundamentos & Competição</p>
@@ -435,7 +471,7 @@
           </article>
 
           <article class="coach-card">
-            <img src="./Gessica.png" alt="Mestre Gessica" />
+            <img src="./Gessica.png" alt="Mestre Gessica" width="692" height="690" loading="lazy" />
             <div>
               <h3>Mestre Gessica</h3>
               <p>Faixa-preta 1º Dan • Kids & particulares para bebês</p>
@@ -448,15 +484,19 @@
           </article>
 
           <article class="coach-card">
-            <img src="./HelderNew.jpeg" alt="Instrutor Helder" />
+            <img src="./HelderNew.jpeg" alt="Professor Helder" width="1024" height="1024" loading="lazy" />
             <div>
-              <h3>Instrutor Helder</h3>
+              <h3>Professor Helder</h3>
               <p>Professor da unidade Ipiranga</p>
+              <ul>
+                <li>Vice campeão SulAmericano 2018</li>
+                <li>Vice campeão Brasileiro 2018</li>
+              </ul>
             </div>
           </article>
 
           <article class="coach-card">
-            <img src="./DanMiyashita.jpeg" alt="Auxiliar Danilo" />
+            <img src="./DanMiyashita.jpeg" alt="Auxiliar Danilo" width="1357" height="1365" loading="lazy" />
             <div>
               <h3>Auxiliar Danilo</h3>
               <p>Faixa-verde • Competidor</p>
@@ -469,7 +509,7 @@
           </article>
 
           <article class="coach-card">
-            <img src="./DavMiyashita.png" alt="Auxiliar Davi" />
+            <img src="./DavMiyashita.png" alt="Auxiliar Davi" width="784" height="976" loading="lazy" />
             <div>
               <h3>Auxiliar Davi</h3>
               <p>Faixa-verde • Competidor</p>
@@ -603,6 +643,11 @@
               </div>
 
               <div class="form-field">
+                <label for="telefone">WhatsApp / Telefone</label>
+                <input id="telefone" name="telefone" type="tel" placeholder="(11) 99999-9999" />
+              </div>
+
+              <div class="form-field">
                 <label for="periodo">Período</label>
                 <select id="periodo" name="periodo" required>
                   <option value="">Selecione</option>
@@ -655,15 +700,48 @@
               <strong>Endereço:</strong>
               Av. Dom Pedro I, 1193 - Vila Monumento, São Paulo - SP
             </p>
+            <p>
+              <strong>Telefone:</strong>
+              (11) 95963-8406
+            </p>
 
-            <a
-              class="btn btn-secondary"
-              href="https://wa.me/5511959638406?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20a%20unidade%20Ipiranga."
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Falar sobre Ipiranga
-            </a>
+            <form id="trial-ipiranga" aria-label="Formulário para aula experimental - Unidade Ipiranga">
+              <div class="form-field">
+                <label for="nome-ipiranga">Nome</label>
+                <input id="nome-ipiranga" name="nome" type="text" placeholder="Seu nome" required />
+              </div>
+
+              <div class="form-field">
+                <label for="telefone-ipiranga">WhatsApp / Telefone</label>
+                <input id="telefone-ipiranga" name="telefone" type="tel" placeholder="(11) 99999-9999" />
+              </div>
+
+              <div class="form-field">
+                <label for="periodo-ipiranga">Período</label>
+                <select id="periodo-ipiranga" name="periodo" required>
+                  <option value="">Selecione</option>
+                  <option value="Manhã">Manhã</option>
+                  <option value="Tarde">Tarde</option>
+                  <option value="Noite">Noite</option>
+                </select>
+              </div>
+
+              <div class="form-field">
+                <label for="nivel-ipiranga">Nível</label>
+                <select id="nivel-ipiranga" name="nivel" required>
+                  <option value="">Selecione</option>
+                  <option value="Iniciante">Iniciante</option>
+                  <option value="Intermediário">Intermediário</option>
+                  <option value="Avançado">Avançado</option>
+                </select>
+              </div>
+
+              <button class="btn btn-accent" type="submit">
+                Agendar pelo WhatsApp
+              </button>
+
+              <small id="trialMsgIpiranga" role="status" aria-live="polite"></small>
+            </form>
           </div>
 
           <div class="map-card">
@@ -700,7 +778,9 @@
     rel="noopener noreferrer"
     aria-label="Falar com a Miyashita BJJ pelo WhatsApp"
   >
-    <i class="fa fa-whatsapp" aria-hidden="true"></i>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" fill="currentColor" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
   </a>
 
   <script src="script.js" defer></script>

@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -L \"https://images.unsplash.com/photo-1571771685300-b7601744aaa0?q=80&w=1600&auto=format&fit=crop\" -o \"c:/Users/marco.aguiar1/Documents/miyashita/michel-miyashita/hero-bg.jpg\")",
+      "PowerShell(Invoke-WebRequest -Uri \"https://images.unsplash.com/photo-1571771685300-b7601744aaa0?q=80&w=1600&auto=format&fit=crop\" -OutFile \"c:\\\\Users\\\\marco.aguiar1\\\\Documents\\\\miyashita\\\\michel-miyashita\\\\hero-bg.jpg\" -UseBasicParsing; \"OK - $\\(\\(Get-Item 'c:\\\\Users\\\\marco.aguiar1\\\\Documents\\\\miyashita\\\\michel-miyashita\\\\hero-bg.jpg'\\).Length\\) bytes\")"
+    ]
+  }
+}
